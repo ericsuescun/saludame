@@ -6,7 +6,7 @@ app.set('case sensitive routing', true);
 app.get('/', (req, res) => {
 	let ans = '';
 	if(req.query.nombre === undefined) {
-		ans = 'Desconocido';
+		ans = 'desconocido';
 	} else {
 		ans = req.query.nombre;
 	}
