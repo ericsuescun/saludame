@@ -8,11 +8,10 @@ app.get('/maker/:nombre', (req, res) => {
 		ans = req.params.nombre;
 		ans = ans.charAt(0).toUpperCase() + ans.slice(1);
 	}
+	if(req.param('nombre') === undefined) {
+		ans = 'desconocido';
+	}
 	res.send(`<h1>Hola ${ans}!</h1>`);
-})
-
-app.get('/maker', (req, res) => {
-	res.send(`<h1>Hola desconocido!</h1>`);
 })
 
 app.listen(3000, () => console.log('Listening on port 3000!'));
