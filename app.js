@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 	} else {
 		ans = req.query.nombre;
 	}
-	res.send('<h1>Hola ' + ans + ' !</h1>');
+	res.send('<h1>Hola ' + ans + '!</h1>');
 })
 
 app.listen(3000, () => console.log('Listening on port 3000!'));
