@@ -5,10 +5,10 @@ app.set('case sensitive routing', true);
 
 app.get('/', (req, res) => {
 	let ans = '';
-	if(req.query.name === undefined) {
+	if(req.query.nombre === undefined) {
 		ans = 'Desconocido';
 	} else {
-		ans = req.query.name;
+		ans = req.query.nombre;
 	}
 	res.send('<h1>Hola ' + ans + ' !</h1>');
 })
